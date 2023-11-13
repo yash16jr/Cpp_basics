@@ -48,9 +48,22 @@ int fib(int n){
 
 int ptr(){
     int x = 3;
-    int* p = &x;
+    int* p = &x; // int* type for pointers
     cout<<"Memory location of x is "<<p<<endl;
+    cout<< p <<endl;
+    // Getting the value at pointer p
+    cout<< *p << endl; 
+ 
 }
+
+void swap(int* x, int* y){
+
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+
+}
+ 
 
 
 
@@ -68,8 +81,16 @@ int main(){
     // cout << reverse(0, s.length(), s);
 
     //cout << fib(7);
-    ptr();
+    //ptr();
 
+    int x = 45;
+    int y = 15;
+
+    cout << "x = " << x << endl;
+    cout <<"y = " << y << endl;
+    swap(x, y);
+    cout << "x = " << x << endl;
+    cout <<"y = " << y << endl;
     return 0;
 }
 
